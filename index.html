@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Convert between different effect sizes</h2>
-                <p class="lead">By convention, Cohen's d of 0.2, 0.5, 0.8 are considered small, medium and large effect sizes respectively (correlation r = 0.1, 0.3, 0.5).</p>
+                <p class="lead">By convention, Cohen's <em>d</em> of 0.2, 0.5, 0.8 are considered small, medium and large effect sizes respectively.</p>
             </div>
         </div>
         </div>
@@ -79,7 +79,9 @@
                         <td><input id="log-odds-ratio" class="form-control" autocomplete="off" type="number" value="0.544" min="0" step="0.01" size="15" onchange="es_logor(this.value)"></td>
                     </tr>
                     <tr>
-                        <th scope="row">Area-under-curve (AUC)</th>
+                        <th scope="row">Area-under-curve (AUC)<div class="tooltip2">*<span class="tooltiptext2">common language effect size statistic</span></div>
+                        </th>
+
                         <td><input id="auc" class="form-control" autocomplete="off" type="number" value="0.584" min="0" step="0.01" size="15" onchange="es_auc(this.value)"></td>
                     </tr>
                     <tr>
@@ -106,13 +108,13 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body" style="height:140px">
-                    <h5 class="card-title">Cohen's <em>d</em> to Pearson's <em>r</em></h5>
+                    <h5 class="card-title">Cohen's <em>d</em> to Pearson's <em>r&nbsp</em><sup><a href="#footnote-1">1</sup></a></h5>
                     <p class="card-text">$$ r = {d \over \sqrt{d^2 + 4}} $$</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body" style="height:140px">
-                    <h5 class="card-title">Cohen's <em>d</em> to area-under-curve (auc)</h5>
+                    <h5 class="card-title">Cohen's <em>d</em> to <em>area-under-curve (auc)&nbsp</em><sup><a href="#footnote-1">1</sup></a></h5>
                     <p class="card-text">$$\text{auc} = {\phi { d \over \sqrt{2}}} $$</p>
                     <h6 class="card-subtitle mb-2 text-muted">\(\phi\): normal cumulative distribution function</h6> 
                     <h6 class="card-subtitle mb-2 text-muted">R code: pnorm(d/sqrt(2), 0, 1)</h6>
@@ -124,13 +126,13 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body" style="height:140px">
-                    <h5 class="card-title">Cohen's <em>d</em> to Cohen's <em>f</em></h5>
+                    <h5 class="card-title">Cohen's <em>d</em> to Cohen's <em>f&nbsp</em><sup><a href="#footnote-2">2</sup></a></h5>
                     <p class="card-text">$$ f = {d \over \ 2} $$</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body" style="height:140px">
-                    <h5 class="card-title">Correlation <em>r</em> Fisher's <em>z</em> (<em>z</em>')</h5>
+                    <h5 class="card-title">Correlation <em>r</em> Fisher's <em>z&nbsp</em><sup><a href="#footnote-1">4</sup></a></h5>
                     <p class="card-text">$$ z' = 0.5 * (log(1 + r) - log(1 - r)) $$</p>
                 </div>
             </div>
@@ -140,7 +142,7 @@
             <div class="card">
                 <div class="card">
                     <div class="card-body" style="height:140px">
-                        <h5 class="card-title">Cohen's <em>d</em> to log odds ratio</h5>
+                        <h5 class="card-title">Cohen's <em>d</em> to <em>log odds ratio&nbsp</em><sup><a href="#footnote-3">3</sup></a></h5>
                         <p class="card-text">$$ \text{log odds ratio} = {d  \pi \over \sqrt{3}} $$</p>
                     </div>
                 </div>
@@ -153,13 +155,19 @@
     <div class="row">
         <div class="col-lg-12">
             <h2>References</h2>
-            <p>Borenstein, M., Hedges, L. V., Higgins, J. P. T., & Rothstein, H. R. (2009). Introduction to meta-analysis. Chichester, West Sussex, UK: Wiley.</p>
+            <p id="footnote-1">1. Ruscio, J. (2008). A probability-based measure of effect size: Robustness to base rates and other factors. Psychological Methods, 13(1), 19-30. doi:10.1037/1082-989x.13.1.19</p>
+
+            <p id="footnote-2">2. Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd ed.), Hillsdale, NJ: Erlbaum.</p>
+
+            <p id="footnote-3">3. Sánchez-Meca, J., Marín-Martínez, F., & Chacón-Moscoso, S. (2003). Effect-size indices for dichotomized outcomes in meta-analysis. Psychological Methods, 8(4), 448-467.
+
+            <p id="footnote-4">4. <a href="https://en.wikipedia.org/wiki/Fisher_transformation">Wikipedia: Fisher's z-transformation of r</a></p>
             
-            <p>Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd ed.), Hillsdale, NJ: Erlbaum.</p>
-                        
-            <p>Rosenthal, R. (1994). Parametric measures of effect size. In H. Cooper & L. V. Hedges (Eds.), The Handbook of Research Synthesis. New York, NY: Sage.</p>
+            <p>5. Borenstein, M., Hedges, L. V., Higgins, J. P. T., & Rothstein, H. R. (2009). Introduction to meta-analysis. Chichester, West Sussex, UK: Wiley.</p>
             
-            <p>Ruscio, J. (2008). A probability-based measure of effect size: Robustness to base rates and other factors. Psychological Methods, 13(1), 19-30. doi:10.1037/1082-989x.13.1.19</p>
+            <p>6. Rosenthal, R. (1994). Parametric measures of effect size. In H. Cooper & L. V. Hedges (Eds.), The Handbook of Research Synthesis. New York, NY: Sage.</p>
+
+            <p></p>
         </div>
     </div>
 

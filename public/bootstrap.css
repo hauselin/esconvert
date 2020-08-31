@@ -10932,3 +10932,34 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: none;
     /* color: #444 !important; */
 }
+
+
+
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 250px;
+  background-color: rgb(33, 145, 140, 0.9);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip2:hover .tooltiptext2 {
+  visibility: visible;
+}
+
+
+
+
