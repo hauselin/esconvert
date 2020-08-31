@@ -92,6 +92,7 @@ function es_d(x) {
     document.getElementById("auc").value = num2str(d_auc(x), dp);
     // update fisherz
     document.getElementById("fisherz").value = num2str(d_fisherz(x), dp);
+
     // update d
     document.getElementById("cohend").value = num2str(x, dp); 
 }
@@ -118,6 +119,7 @@ function es_r(x) {
     document.getElementById("auc").value = num2str(d_auc(d), dp);
     // update fisherz
     document.getElementById("fisherz").value = num2str(d_fisherz(d), dp);
+
     // update r
     document.getElementById("pearsonr").value = num2str(x, dp);
 }
@@ -163,6 +165,7 @@ function es_f(x) {
     document.getElementById("auc").value = num2str(d_auc(d), dp);
     // update fisherz
     document.getElementById("fisherz").value = num2str(d_fisherz(d), dp);
+    
     // update f
     document.getElementById("cohenf").value = num2str(x, dp);
 }
